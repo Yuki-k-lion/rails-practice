@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:8.0.17
+    container_name: base-prac-db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: basic_development
+      MYSQL_USER: rails
+      MYSQL_PASSWORD: rails
+    ports:
+      - "3306:3306"
